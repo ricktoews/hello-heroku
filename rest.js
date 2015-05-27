@@ -17,9 +17,16 @@ server.use(restify.jsonp());
 server.listen(8000);
 
 // Routes
+server.get("/", hello);
 server.get("/phi/:power", phi);
 server.get("/dc/:denom", dc);
 server.post("/phi", phi);
+
+function hello(req, res, callback) {
+	var data = { msg: "Hello, World!" };
+	res.json(data);
+	return callback();
+}
 
 function phi(req, res, callback) {
 	if (req.method == "POST")
