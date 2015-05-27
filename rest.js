@@ -23,14 +23,14 @@ server.get("/dc/:denom", dc);
 server.post("/phi", phi);
 
 function hello(req, res, callback) {
-	var data = { msg: "Hello, World!" };
+	var data = { msg: "Howdy, World!" };
 	res.json(data);
 	return callback();
 }
 
 function phi(req, res, callback) {
 	if (req.method == "POST")
-		power = req.body.power;
+		var power = req.body.power;
 	else
 		power = req.params.power;
     res.contentType = "json";
