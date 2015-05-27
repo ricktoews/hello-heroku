@@ -1,0 +1,27 @@
+{
+  "name": "nodelab",
+  "version": "1.0.0",
+  "description": "Getting acquained with nodejs",
+  "main": "rest.js",
+  "dependencies": {
+    "body-parser": "^1.12.0",
+    "cheerio": "^0.19.0",
+    "express": "^4.12.2",
+    "jquery": "^2.1.4",
+    "jsdom": "^5.3.0",
+    "mongojs": "^0.18.2",
+    "restify": "^2.7.0",
+    "xmlhttprequest": "^1.7.0"
+  },
+  "devDependencies": {
+    "mocha": "^2.2.5",
+    "should": "^6.0.1",
+    "supertest": "^1.0.1"
+  },
+  "scripts": {
+    "test": "mocha",
+    "start": "node server.js"
+  },
+  "author": "Rick Toews",
+  "license": "ISC"
+}
