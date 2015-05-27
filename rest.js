@@ -14,7 +14,7 @@ server.use(restify.bodyParser({rejectUnknown: true}));  // Pulls out the paramet
 server.use(restify.CORS());
 server.use(restify.fullResponse());
 server.use(restify.jsonp());
-server.listen(8000);
+server.listen(process.env.PORT || 8000);
 
 // Routes
 server.get("/", hello);
