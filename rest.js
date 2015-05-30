@@ -20,6 +20,7 @@ server.listen(process.env.PORT || 8000);
 server.get("/", hello);
 server.get("/phi/:power", phi);
 server.get("/dc/:denom", dc);
+server.get("/phi_lab/:x/:y", phi_lab);
 server.post("/phi", phi);
 
 function hello(req, res, callback) {
@@ -42,6 +43,14 @@ function phi(req, res, callback) {
 function dc(req, res, callback) {
 	var denom = req.params.denom;
 	var data = arithmo.decimals(denom);
+	res.json(data);
+	return callback();
+}
+
+function phi_lab(req, res, callback) {
+	var x = req.params.x;
+	var y = req.params.y;
+	var data = arithmo.phiXY({x: x, y: y}, 10);
 	res.json(data);
 	return callback();
 }
