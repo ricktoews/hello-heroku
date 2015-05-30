@@ -20,7 +20,7 @@ server.listen(process.env.PORT || 8000);
 server.get("/", hello);
 server.get("/phi/:power", phi);
 server.get("/dc/:denom", dc);
-server.get("/phi_lab/:x/:y", phi_lab);
+server.get("/phixy/:x/:y", phixy);
 server.post("/phi", phi);
 
 function hello(req, res, callback) {
@@ -47,10 +47,10 @@ function dc(req, res, callback) {
 	return callback();
 }
 
-function phi_lab(req, res, callback) {
+function phixy(req, res, callback) {
 	var x = req.params.x;
 	var y = req.params.y;
-	var data = arithmo.phiXY({x: x, y: y}, 10);
+	var data = arithmo.phiXY({x: 1*x, y: 1*y}, 10);
 	res.json(data);
 	return callback();
 }
