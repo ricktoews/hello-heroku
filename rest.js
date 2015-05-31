@@ -1,4 +1,4 @@
-// Authored by Rick Toews
+// Authored by Ronald Toews
 
 //===========================================================================================
 // Equivalence REST Interface
