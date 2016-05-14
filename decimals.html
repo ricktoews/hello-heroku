@@ -25,8 +25,13 @@
 <body>
 <div class="container" ng-app="mathToysApp">
   <div ng-controller="DecimalCtrl">
-  <input type="number" ng-model="denom"/><button ng-click="calculate()">Calculate</button>
-  <decimals decimal-data="{{data}}"></decimals>
+    <div class="input-group">
+      <input class="form-control" type="number" ng-model="denom"/>
+      <span class="input-group-btn">
+        <button type="button" class="btn btn-primary" ng-click="calculate()">Calculate</button>
+      </span>
+    </div>
+    <decimals decimal-data="{{data}}"></decimals>
   </div>
 </div>
 </body>
