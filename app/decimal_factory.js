@@ -1,4 +1,4 @@
-angular.module('demo')
+angular.module('mathToysApp')
 .factory('decimal', function($http) {
     console.log('making decimal factory');
     return function(denom) {

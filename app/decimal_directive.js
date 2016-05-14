@@ -1,5 +1,5 @@
 /* global angular */
-angular.module('demo')
+angular.module('mathToysApp')
 .directive('decimals', function() {
   console.log('attempting to do something directive-y');
   return {
