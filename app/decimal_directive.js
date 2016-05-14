@@ -1,3 +1,4 @@
+/* global angular */
 angular.module('demo')
 .directive('decimals', function() {
   console.log('attempting to do something directive-y');

@@ -1,3 +1,4 @@
+/* global angular */
 angular.module('demo')
 .controller('DecimalCtrl', function($scope, decimal) {
   $scope.calculate = function() {

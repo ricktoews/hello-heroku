@@ -1,3 +1,4 @@
+/* global angular */
 angular.module('demo', [])
 
 .controller('LodashLabCtrl', function($scope, decimal) {
