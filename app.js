@@ -54,10 +54,10 @@ const NO_HINT = 'none';
 
 const SSML_SPEAK_START = '<speak>';
 const SSML_SPEAK_END = '</speak>';
-const COLD_WIND_AUDIO = '<audio src="https://ancient-cliffs-9181.heroku.com/audio/NumberGenieEarcon_ColdWind.wav">cold wind sound</audio>';
-const STEAM_ONLY_AUDIO = '<audio src="https://ancient-cliffs-9181.heroku.com/audio/NumberGenieEarcon_SteamOnly.wav">steam sound</audio>';
-const STEAM_AUDIO = '<audio src="https://ancient-cliffs-9181.heroku.com/audio/NumberGenieEarcons_Steam.wav">steam sound</audio>';
-const YOU_WIN_AUDIO = '<audio src="https://ancient-cliffs-9181.heroku.com/audio/NumberGenieEarcons_YouWin.wav">winning sound</audio>';
+const COLD_WIND_AUDIO = '<audio src="https://ancient-cliffs-9181.herokuapp.com/audio/NumberGenieEarcon_ColdWind.wav">cold wind sound</audio>';
+const STEAM_ONLY_AUDIO = '<audio src="https://ancient-cliffs-9181.herokuapp.com/audio/NumberGenieEarcon_SteamOnly.wav">steam sound</audio>';
+const STEAM_AUDIO = '<audio src="https://ancient-cliffs-9181.herokuapp.com/audio/NumberGenieEarcons_Steam.wav">steam sound</audio>';
+const YOU_WIN_AUDIO = '<audio src="https://ancient-cliffs-9181.herokuapp.com/audio/NumberGenieEarcons_YouWin.wav">winning sound</audio>';
 
 const ANOTHER_GUESS_PROMPTS = ['What\'s your next guess?', 'Have another guess?', 'Try another.'];
 const LOW_PROMPTS = ['It\'s lower than %s.'];
