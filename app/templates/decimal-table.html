@@ -1,8 +1,18 @@
-  <table class="table table-striped">
+  <table class="table table-striped table-sm">
   <thead>
-    <tr><th>Fraction</th><th>Decimal</th></tr>
+    <tr>
+      <th>Fraction</th>
+      <th>Decimal</th>
+      <th>Period</th>
+      <th>Repeating</th>
+    </tr>
   </thead>
   <tbody>
-    <tr ng-repeat="row in decimalData"><td>{{row.fraction}}</td><td>{{row.decimal}}</td></tr>
+    <tr ng-repeat="row in decimalData">
+      <td>{{row.fraction}}</td>
+      <td>{{row.decimal}}</td>
+      <td>{{row.length}}</td>
+      <td>{{row.repeating}}</td>
+    </tr>
   </tbody>
   </table>
