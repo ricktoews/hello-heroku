@@ -1,0 +1,40 @@
+<!doctype html>
+<html>
+<head>
+  <title>Flex</title>
+  <meta charset="utc-8">
+  <style type="text/css">
+.flex-container {
+  /* We first create a flex layout context */
+  display: flex;
+  
+  /* Then we define the flow direction 
+     and if we allow the items to wrap 
+   * Remember this is the same as:
+   * flex-direction: row;
+   * flex-wrap: wrap;
+   */
+  flex-flow: row wrap;
+  
+  /* Then we define how is distributed the remaining space */
+  justify-content: space-around;
+  border: 1px solid black;
+}
+.child {
+    width:200px;
+    background-color: #ccc;
+}
+  </style>
+</head>
+<body>
+<div class="flex-container">
+  <div class="child">the sun was shining on the sea, shining with all its might; it did its very best to make the billows smooth and bright. And this was odd, because it was the middle of the night.</div>
+  <div class="child">the moon was shining sulkily, because she thought the sun had got no business to be there after the day was done. It's very rude of him, she said, to come and spoil the fun.</div>
+  <div class="child">the walrus and the carpenter were walking close at hand. They wept like anything to see such quantities of sand. If only this were swept away, they said, it would be grand. If seven maids, with seven mops, swept it for half a year, do you suppose, the walrus said, that they could get it clear?</div>
+  <div class="child">I doubt it, said the carpenter, and shed a bitter tear.</div>
+  <div class="child">more content the walrus and the carpenter were walking close at hand. They wept like anything to see such</div>
+  <div class="child">still more content</div>
+  <div class="child">content</div>
+</div>
+</body>
+</html>
