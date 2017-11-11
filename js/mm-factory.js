@@ -194,7 +194,6 @@ app.factory('mMFactory', function(mMScoring) {
         console.log('pickCode permutations', permutations);
         var randPick = parseInt(Math.random() * permutations.length, 10);
         var code = permutations[randPick];
-        console.log('pickCode code', code);
         return code;
     }
 

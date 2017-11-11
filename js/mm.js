@@ -61,6 +61,7 @@ app.controller('MasterMind', function(mMFactory, mMScoring, mMCommentary, $scope
     }
     
     function resetGame() {
+        mMFactory.initialize (6, 4);
         currentRow = 0;
         currentCode = '';
         $scope.rows = [{},{},{},{},{},{},{},{}];
