@@ -15,12 +15,12 @@ function Hanoi() {
         lastTo = to;
         var item = foundation[from].shift();
         foundation[to].unshift(item);
-        console.log('Status #', moveCount, ':', JSON.stringify(foundation[0]), '||', JSON.stringify(foundation[1]), '||', JSON.stringify(foundation[2]));
         moveCount++;
+        console.log('Status #', moveCount, ':', JSON.stringify(foundation[0]), '||', JSON.stringify(foundation[1]), '||', JSON.stringify(foundation[2]));
         if (foundation[0].length === 0 && foundation[1].length === 0) {
             console.log('We seem to be finished.');
         }
-        else if (moveCount < 200) {
+        else if (moveCount < 300) {
             next();
         }
     }
