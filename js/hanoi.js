@@ -2,34 +2,51 @@ function Hanoi() {
     var foundation = [[],[],[]];
     var lastFrom, lastTo;
     var moveCount = 0;
+    var towerStates = [];
+    var stackHeight;
+    var that = this;
     
-    function init(stackHeight) {
+    function getStackHeight() {
+        return stackHeight;
+    }
+    this.getStackHeight = getStackHeight;
+    
+    function init(discs) {
+        stackHeight = discs;
         for (let i = 0; i < stackHeight; i++) {
             foundation[0].push(i);
         }
     }
     this.init = init;
     
+    function getTowerStates() {
+        return towerStates;
+    }
+    this.getTowerStates = getTowerStates;
+    
+    function start() {
+        var target = foundation[0].length % 2 === 1 ? 2 : 1;
+        return move(0, target);
+    }
+    this.start = start;
+    
     function move(from, to) {
         lastFrom = from;
         lastTo = to;
         var item = foundation[from].shift();
         foundation[to].unshift(item);
+        towerStates.push({ from: from, to: to, item: item });
         moveCount++;
         console.log('Status #', moveCount, ':', JSON.stringify(foundation[0]), '||', JSON.stringify(foundation[1]), '||', JSON.stringify(foundation[2]));
         if (foundation[0].length === 0 && foundation[1].length === 0) {
             console.log('We seem to be finished.');
+            that.towerStates = towerStates;
+            console.log('tower states', that.towerStates);
         }
         else if (moveCount < 300) {
             next();
         }
     }
-    
-    function start() {
-        var target = foundation[0].length % 2 === 1 ? 2 : 1;
-        move(0, target);
-    }
-    this.start = start;
     
     function getWorkingHeight(tower) {
         var current = tower[0];

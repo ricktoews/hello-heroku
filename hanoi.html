@@ -1,15 +1,33 @@
-<!doctype html>
 <html>
+<!doctype html>
 <head>
   <title>Towers of Hanoi</title>
+  <link rel="stylesheet" href="./css/hanoi.css">
   <script src="./js/hanoi.js"></script>
+  <script src="./js/hanoi-graphics.js"></script>
   <script>
+  var discs = 7;
   var h = new Hanoi();
-  h.init(7);
+  h.init(discs);
   h.start();
-  
+  var hg = new HanoiGraphics(h);
   </script>
 </head>
 <body>
+<h1>Hanoi</h1>
+<button id="move">Move</button>
+<div class="game-area">
+  <div class="tower" id="tower-0">
+    <div class="base"></div>
+  </div>
+  <div class="tower" id="tower-1">
+    <div class="base"></div>
+  </div>
+  <div class="tower" id="tower-2">
+    <div class="base"></div>
+  </div>
+</div>
+<script>
+</script>
 </body>
 </html>
